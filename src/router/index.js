@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import Showproduct from '@/views/showproduct.vue'
 import Menu from "../components/menu.vue";
 
+
 const routes = [
   {
     path: '/',
@@ -18,6 +19,11 @@ const routes = [
     path: '/show',
     name: 'show',
     component: () => import(/* webpackChunkName: "about" */ '../views/showproduct.vue')
+  },
+   {
+    path: '/coust',
+    name: 'coust',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Coustomer.vue')
   },
   {
     path: '/about',

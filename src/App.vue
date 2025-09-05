@@ -31,6 +31,9 @@
          <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/coust">Coustomer</a>
+        </li>
          
       </ul>
       <form class="d-flex" role="search">
