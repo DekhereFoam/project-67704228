@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Showproduct from '@/views/showproduct.vue'
-import Menu from "../components/menu.vue";
-
+import Menu from "../components/menu.vue"
+import add_coustomer from '../views/add_coustomer.vue'
 
 const routes = [
   {
@@ -20,6 +20,12 @@ const routes = [
     name: 'show',
     component: () => import(/* webpackChunkName: "about" */ '../views/showproduct.vue')
   },
+  {
+    path: '/add_coustomer',
+    name: 'add_coustomer',
+    component: () => import(/* webpackChunkName: "about" */ '../views/add_coustomer.vue')
+  },
+
    {
     path: '/coust',
     name: 'coust',
