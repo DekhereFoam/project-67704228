@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2025 at 07:34 AM
+-- Generation Time: Sep 19, 2025 at 08:29 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -44,7 +44,8 @@ INSERT INTO `customers` (`customer_id`, `firstName`, `lastName`, `phone`, `usern
 (1, 'Somchai', 'Wongdee', '0812345678', 'somchaiw', 'password123'),
 (2, 'Anong', 'Srisuk', '0898765432', 'anongs', 'securepass456'),
 (3, 'Akarapon', 'Komkleaw', '0902510447', 'Fom', '123456'),
-(4, 'Aphirat', 'Yamyaem', '081552678', 'Do', '546789');
+(4, 'Aphirat', 'Yamyaem', '081552678', 'Do', '546789'),
+(5, 'Rod', 'tank', '123456789', 'Rodtank', '$2y$10$oSY75tXsuJALa1Ew7tQ1l.zPKIS5vE97xTBRTngGYTCpAr8vOXrh2');
 
 -- --------------------------------------------------------
 
@@ -106,6 +107,16 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`product_id`, `product_name`, `description`, `price`, `image`, `stock`, `created_at`) VALUES
+(1, 'เสื้อยืดคอกลม', 'เสื้อยืดผ้าฝ้าย 100% สวมใส่สบาย', '199.00', 'tshirt.jpg', 50, '2025-09-19 17:27:10'),
+(2, 'กางเกงยีนส์', 'กางเกงยีนส์ทรงกระบอก สีฟ้าอ่อน', '799.00', 'jeans.jpg', 30, '2025-09-19 17:27:10'),
+(3, 'รองเท้าผ้าใบ', 'รองเท้าผ้าใบสีขาว ใส่ได้ทุกโอกาส', '1299.00', 'sneakers.jpg', 20, '2025-09-19 17:27:10'),
+(4, 'Stussy', 'shirt', '800.00', '1758305791_stussy-basic-t-shirt-white-225218.webp', 20, '2025-09-19 18:16:31');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -147,7 +158,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `orderdetails`
@@ -171,7 +182,7 @@ ALTER TABLE `payments`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
