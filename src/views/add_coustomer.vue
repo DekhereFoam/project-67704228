@@ -56,7 +56,7 @@ export default {
 
         if (data.success) {
           // ✅ เคลียร์ข้อมูลใน textbox หลังบันทึกสำเร็จ
-          this.customer = { firstName: "", lastName: "", phone: "", username: "", password: "" };
+          this.customer = { first_name: "", last_Name: "", phone: "", username: "", password: "" };
         }
 
       } catch (err) {

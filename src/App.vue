@@ -22,7 +22,8 @@
             <li><a class="dropdown-item" href="/ap">AddProduct</a></li>
             <li><a class="dropdown-item" href="/p">Product</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="/student">student</a></li>
+            <li><a class="dropdown-item" href="/coust">Coustomer</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -37,6 +38,15 @@
         <li class="nav-item">
           <a class="nav-link" href="/add_coustomer">Addcoustomer</a>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            แบบฝึกหัดที่6
+          </a>
+          <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/student">student</a></li>
+            <li><a class="dropdown-item" href="/add">add</a></li>
+            </ul>
+            </li>
          
       </ul>
       <form class="d-flex" role="search">
