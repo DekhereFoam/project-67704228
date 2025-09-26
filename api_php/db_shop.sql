@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2025 at 08:29 PM
+-- Generation Time: Sep 26, 2025 at 09:01 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -44,8 +44,7 @@ INSERT INTO `customers` (`customer_id`, `firstName`, `lastName`, `phone`, `usern
 (1, 'Somchai', 'Wongdee', '0812345678', 'somchaiw', 'password123'),
 (2, 'Anong', 'Srisuk', '0898765432', 'anongs', 'securepass456'),
 (3, 'Akarapon', 'Komkleaw', '0902510447', 'Fom', '123456'),
-(4, 'Aphirat', 'Yamyaem', '081552678', 'Do', '546789'),
-(5, 'Rod', 'tank', '123456789', 'Rodtank', '$2y$10$oSY75tXsuJALa1Ew7tQ1l.zPKIS5vE97xTBRTngGYTCpAr8vOXrh2');
+(4, 'Aphirat', 'Yamyaem', '081552678', 'Do', '546789');
 
 -- --------------------------------------------------------
 
@@ -116,6 +115,32 @@ INSERT INTO `products` (`product_id`, `product_name`, `description`, `price`, `i
 (3, 'รองเท้าผ้าใบ', 'รองเท้าผ้าใบสีขาว ใส่ได้ทุกโอกาส', '1299.00', 'sneakers.jpg', 20, '2025-09-19 17:27:10'),
 (4, 'Stussy', 'shirt', '800.00', '1758305791_stussy-basic-t-shirt-white-225218.webp', 20, '2025-09-19 18:16:31');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `students`
+--
+
+CREATE TABLE `students` (
+  `student_id` int(11) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`student_id`, `first_name`, `last_name`, `email`, `phone`, `created_at`) VALUES
+(1, 'Somchai', 'Sukjai', 'somchai@example.com', '0811111111', '2025-09-26 17:29:11'),
+(2, 'Suda', 'Jaidee', 'suda@example.com', '0822222222', '2025-09-26 17:29:11'),
+(3, 'Anan', 'Thongdee', 'anan@example.com', '0833333333', '2025-09-26 17:29:11'),
+(6, 'sdadasd', 'adasdasda', 'sdasd@gmail.com', '0816975688', '2025-09-26 18:56:46'),
+(7, 'dasdasdas', 'sadassa', 'adwasdawd@gmail.com', '0817468999', '2025-09-26 18:59:41');
+
 --
 -- Indexes for dumped tables
 --
@@ -151,6 +176,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`product_id`);
 
 --
+-- Indexes for table `students`
+--
+ALTER TABLE `students`
+  ADD PRIMARY KEY (`student_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -158,7 +189,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `orderdetails`
@@ -183,6 +214,12 @@ ALTER TABLE `payments`
 --
 ALTER TABLE `products`
   MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `students`
+--
+ALTER TABLE `students`
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
