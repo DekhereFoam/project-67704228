@@ -23,7 +23,7 @@
             <li><a class="dropdown-item" href="/p">Product</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="/student">student</a></li>
-            <li><a class="dropdown-item" href="/coust">Coustomer</a></li>
+            <li><a class="dropdown-item" href="/ed">Costomer_edit</a></li>
           </ul>
         </li>
         <li class="nav-item">
