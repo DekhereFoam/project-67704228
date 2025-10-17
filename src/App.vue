@@ -21,6 +21,7 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/ap">AddProduct</a></li>
             <li><a class="dropdown-item" href="/p">Product</a></li>
+            <li><a class="dropdown-item" href="/pe">Productedit</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="/student">student</a></li>
             <li><a class="dropdown-item" href="/ed">Costomer_edit</a></li>
@@ -36,7 +37,7 @@
           <a class="nav-link" href="/coust">Coustomer</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/add_coustomer">Addcoustomer</a>
+          <a class="nav-link" href="/add_coustomer"></a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,9 +46,18 @@
           <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="/student">student</a></li>
             <li><a class="dropdown-item" href="/add">add</a></li>
+            <li><a class="dropdown-item" href="/em">employees</a></li>
+            
             </ul>
-            </li>
-         
+         </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Product
+          </a>
+          <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/pe">Productedit</a></li>
+            </ul>
+         </li>
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
