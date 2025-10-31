@@ -56,6 +56,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/student.vue')
   },
   {
+    path: '/log',
+    name: 'login',
+    component: () => import(/* webpackChunkName: "about" */ '../views/logincoustumer.vue')
+  },
+  {
     path: '/add_coustomer',
     name: 'add_coustomer',
     component: () => import(/* webpackChunkName: "about" */ '../views/add_coustomer.vue')
@@ -71,11 +76,31 @@ const routes = [
     name: 'about',
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   }
+  
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+// 🧠 Navigation Guard — ตรวจสอบการเข้าสู่ระบบ
+router.beforeEach((to, from, next) => {
+  const isLoggedIn = localStorage.getItem("customer_login") === "true";
 
-export default router
+  // ถ้าหน้านั้นต้องล็อกอินก่อน แต่ยังไม่ได้ล็อกอิน
+  if (to.meta.requiresAuth && !isLoggedIn) {
+    alert("⚠ กรุณาเข้าสู่ระบบก่อนใช้งานหน้านี้");
+    next("/login");
+  }
+  // ถ้าเข้าสู่ระบบแล้วแต่พยายามกลับไปหน้า login อีก → ส่งกลับหน้าแรก
+  else if (to.path === "/login" && isLoggedIn) {
+    next("/");
+  } 
+  // อื่น ๆ ไปต่อได้ตามปกติ
+  else {
+    next();
+  }
+});
+
+export default router;
+
