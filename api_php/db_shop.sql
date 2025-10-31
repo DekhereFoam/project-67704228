@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 26, 2025 at 09:01 PM
+-- Generation Time: Oct 31, 2025 at 05:20 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -45,6 +45,33 @@ INSERT INTO `customers` (`customer_id`, `firstName`, `lastName`, `phone`, `usern
 (2, 'Anong', 'Srisuk', '0898765432', 'anongs', 'securepass456'),
 (3, 'Akarapon', 'Komkleaw', '0902510447', 'Fom', '123456'),
 (4, 'Aphirat', 'Yamyaem', '081552678', 'Do', '546789');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `employees`
+--
+
+CREATE TABLE `employees` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(100) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `profile_image` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `employees`
+--
+
+INSERT INTO `employees` (`id`, `first_name`, `last_name`, `username`, `password`, `profile_image`, `created_at`, `updated_at`) VALUES
+(1, 'John', 'Smith', 'john.smith', '$2y$10$abcdefghijklmnopqrstuvwxyz123456', '1761927541_1760725478_images.png', '2025-10-31 16:17:51', '2025-10-31 16:19:01'),
+(2, 'Sarah', 'Johnson', 'sarah.j', '$2y$10$zyxwvutsrqponmlkjihgfedcba654321', '1761927534_pngtree-3d-illustration-of-unhappy-office-worker-png-image_11486940.png', '2025-10-31 16:17:51', '2025-10-31 16:18:54'),
+(3, 'Michael', 'Williams', 'mike.w', '$2y$10$1234567890abcdefghijklmnopqrstuv', '1761927528_1760725566_1760725544_images.jpg', '2025-10-31 16:17:51', '2025-10-31 16:18:48'),
+(4, 'Emily', 'Brown', 'emily.brown', '$2y$10$uvwxyz0987654321fedcbazyxwvutsr', '1761927523_1760724306_pngtree-a-diligent-office-worker-png-image_16165552.png', '2025-10-31 16:17:51', '2025-10-31 16:18:43');
 
 -- --------------------------------------------------------
 
@@ -152,6 +179,13 @@ ALTER TABLE `customers`
   ADD PRIMARY KEY (`customer_id`);
 
 --
+-- Indexes for table `employees`
+--
+ALTER TABLE `employees`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
+
+--
 -- Indexes for table `orderdetails`
 --
 ALTER TABLE `orderdetails`
@@ -190,6 +224,12 @@ ALTER TABLE `students`
 --
 ALTER TABLE `customers`
   MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `employees`
+--
+ALTER TABLE `employees`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `orderdetails`
